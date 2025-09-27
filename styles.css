@@ -277,3 +277,74 @@ img{max-width:100%;height:auto;display:block}
 .footer-notus__legal{
   text-align:center;color:#445b75;padding:.9rem 0 1.2rem;
 }
+
+/* ===== Footer Notus — responsive spacing & layout polish ===== */
+
+.footer-notus .container{
+  padding-inline: clamp(1rem, 4vw, 2rem);
+}
+
+/* مسافات عموديه */
+.footer-notus{ padding-block: 1.25rem; }
+.footer-notus__grid{ row-gap: 1.25rem; }
+
+/* ترويسة ونص */
+.footer-notus__title{ margin: 0 0 .5rem; line-height: 1.2; }
+.footer-notus__text{ margin: 0 0 1rem; }
+
+/* صف الأيقونات: وسط الشاشة على الصغير، مع التفاف ومسافات واضحة */
+.footer-notus__social{
+  display: flex; flex-wrap: wrap; gap: .65rem;
+  justify-content: center; /* وسط على الشاشات الصغيرة */
+}
+@media (min-width: 640px){
+  .footer-notus__social{ justify-content: flex-start; } /* يمين/يسار حسب RTL على الأكبر */
+}
+/* حجم الأيقونات ثابت وجذاب */
+.sbtn{ width: 42px; height: 42px; }
+
+/* شبكات الأعمدة */
+.footer-notus__links{
+  display: grid; gap: 1.25rem; /* مسافة بين العمودين */
+}
+@media (min-width: 520px){
+  .footer-notus__links{ grid-template-columns: 1fr 1fr; }
+}
+
+/* توزيع عمود النص + عمود الروابط بشكل متوازن */
+@media (min-width: 840px){
+  .footer-notus__grid{
+    grid-template-columns: 1.2fr 1fr;
+    column-gap: clamp(1rem, 4vw, 2rem);
+    align-items: start;
+  }
+}
+@media (min-width: 1180px){
+  .footer-notus__grid{
+    grid-template-columns: 1.1fr .9fr; /* توازن أكثر على الشاشات الكبيرة */
+  }
+}
+
+/* الفاصل والحقوق مع حواف مريحة */
+.footer-notus__divider{
+  border: 0;
+  border-top: 1px solid rgba(36,60,90,.15);
+  margin: .25rem 0 0;
+}
+.footer-notus__legal{
+  padding: .9rem 0 1.2rem;
+  text-align: center;
+}
+
+/* تأمين ضد الالتصاق بحواف الشاشة الصغيرة جدًا */
+@media (max-width: 360px){
+  .footer-notus .container{ padding-inline: 1rem; } /* أقل شي */
+  .sbtn{ width: 40px; height: 40px; }
+}
+
+/* تحسين التباعد العمودي في العمود الأيمن */
+.footer-notus__links ul{
+  list-style: none; margin: 0; padding: 0;
+  display: grid; gap: .45rem;
+}
+.footer-notus__links a{ text-decoration: none; }
