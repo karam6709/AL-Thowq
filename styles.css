@@ -379,3 +379,104 @@ img{max-width:100%;height:auto;display:block}
   outline: 2px solid #fbbc05; /* أصفر من ألوان Google */
   outline-offset: 2px;
 }
+
+/* ===== Contact Form – Polished ===== */
+.contact-form {
+  margin-top: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.form__row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+@media (min-width: 640px){
+  .form__row { grid-template-columns: 1fr 1fr; }
+}
+
+.form__field {
+  position: relative;
+}
+
+.form__input,
+.form__textarea {
+  width: 100%;
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--radius-lg);
+  padding: .8rem .9rem;
+  background: #fff;
+  color: inherit;
+  font: inherit;
+  box-shadow: var(--shadow-sm);
+  transition: border-color .2s, box-shadow .2s, background .2s;
+}
+.form__input::placeholder,
+.form__textarea::placeholder { color: var(--neutral-400); }
+
+.form__input:focus,
+.form__textarea:focus {
+  outline: none;
+  border-color: var(--primary-300);
+  box-shadow: 0 0 0 3px rgba(16,185,129,.18);
+}
+
+.form__label {
+  display: block;
+  font-size: .9rem;
+  font-weight: 700;
+  margin-bottom: .35rem;
+  color: var(--neutral-800);
+}
+
+.form__error {
+  display: block;
+  margin-top: .35rem;
+  font-size: .8rem;
+  color: #b91c1c; /* أحمر هادئ */
+  min-height: 1em;
+}
+
+.form__extras {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  flex-wrap: wrap;
+  margin-top: .25rem;
+}
+
+.checkbox { display: inline-flex; align-items: center; gap: .5rem; cursor: pointer; }
+.checkbox input {
+  width: 18px; height: 18px; accent-color: var(--primary-600);
+  border-radius: .35rem;
+}
+
+.form__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  flex-wrap: wrap;
+}
+.form__actions .btns {
+  display: flex; gap: .6rem; flex-wrap: wrap;
+}
+
+/* حالة الخطأ */
+.is-invalid {
+  border-color: #ef4444 !important;
+  box-shadow: 0 0 0 3px rgba(239,68,68,.15) !important;
+}
+
+/* شريط الحالة */
+.form__status {
+  background: linear-gradient(135deg, var(--primary-100), #fff);
+  border: 1px solid var(--primary-200);
+  color: var(--neutral-800);
+  border-radius: var(--radius-lg);
+  padding: .8rem 1rem;
+  box-shadow: var(--shadow-sm);
+  font-weight: 700;
+}
