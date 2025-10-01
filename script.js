@@ -1,6 +1,5 @@
-// سنة ديناميكية للفوتر
     document.getElementById('year').textContent = new Date().getFullYear();
-    // زر إظهار/إخفاء القائمة على الشاشات الصغيرة
+    // Show/Hide menu button on small screens
     const toggle = document.querySelector('.nav-toggle');
     const menu = document.getElementById('main-menu');
     if(toggle && menu){
@@ -13,7 +12,7 @@
 
 // ===== WhatsApp send + validation for contact form =====
 (function () {
-  const businessNumber = '962777245558'; // رقم واتساب الدولي بدون +
+  const businessNumber = '962777245558';
 
   const form = document.getElementById('contactForm');
   const btnWhats = document.getElementById('whatsappBtn');
@@ -89,7 +88,7 @@ ${message}`
 
   if(btnWhats){
     btnWhats.addEventListener('click', function(e){
-      e.preventDefault(); // في حال كان داخل form
+      e.preventDefault();
       if(!validateAll()){
         return;
       }
