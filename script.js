@@ -13,7 +13,7 @@
 
 // ===== WhatsApp send + validation for contact form =====
 (function () {
-  const businessNumber = '962777441411'; // رقم واتساب الدولي بدون +
+  const businessNumber = '962777245558'; // رقم واتساب الدولي بدون +
 
   const form = document.getElementById('contactForm');
   const btnWhats = document.getElementById('whatsappBtn');
